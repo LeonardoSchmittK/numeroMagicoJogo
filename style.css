@@ -1,0 +1,21 @@
+body{
+    background-color: aliceblue;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+input{
+    padding: 0.5em;
+    border-radius: 2em;
+
+}
+
+button {
+    width: 6em;
+    padding: 0.4em;
+    border-radius: 0.5em;
+}
