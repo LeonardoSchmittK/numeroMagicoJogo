@@ -1,10 +1,6 @@
 //id = numeroUsuario
 //acessar -> dificuldade
 
-//Pega o valor do input e armazena na variavel numeroUsuario o valor dela
-let input = document.getElementById('numeroUsuario')
-let numeroUsuario = input.value
-
 //Armazena a dificuldade passada pela outra script (dlc-1.js) e guarda na variavel dificuldadeEscolhida
 let dificuldadeEscolhida = localStorage.getItem("dificuldade")
 
@@ -20,6 +16,9 @@ let contador = 0
 
 
 function adivinharNumero(dificuldadeEscolhida){
+    //Pega o valor do input e armazena na variavel numeroUsuario o valor dela
+    let input = document.getElementById('numeroUsuario')
+    let numeroUsuario = input.value
     if(dificuldadeEscolhida == "facil"){
         let numeroAleatorio = parseInt(Math.random() * 10) + 1
         if(numeroUsuario == numeroAleatorio){
