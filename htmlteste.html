@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Número</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <h1>Jogo do número mágico</h1>
+    <div id="style">
+      <hr>
+      <p>#tela inicial#</p>
+      <h2>Escolha um modo de jogo </h2>
+      <button>PvE</button>
+      <button>PvP</button>
+      <button>DLCs</button>
+    </div>
+    <hr>
+    <div id="pve">
+      <h2>Modo PvE</h2>
+      <p>#tela PvE 1#</p>
+      <h3>Escolha uma dificuldade </h3>
+
+      <button id="facil">Fácil</button>
+      <button id="medio">medio</button>
+      <button id="dificil">Difícil</button>
+    </div>
+    <hr>
+
+    <div id="stylePvE">
+      <p>#tela PvE 2#</p>
+      <h2>Jogo</h2>
+      <p></p>
+      <label>Digite um número</label>
+      <input type="number" id="numeroUsuario" name="number">
+      <button id="botao">Adivinhar</button>
+      <div id="div"></div>
+    </div>
+    <hr>
+    <div id="stylePvP">
+
+      <div class="aplicarNumeroMagicoContainer">
+        <p>tela PvP 1#</p>
+        <h2>Jogo PvP</h2>
+        <label>Digite um número para ser adivinhado</label>
+        <input class="numeroMagico" type="password" id="number3" name="number3">
+        <button onclick="aplicarNumeroMagico()">Aplicar</button>
+      </div>
+
+      <div class="aplicarNumeroChuteContainer">
+        <label>Digite um número</label>
+        <input class="numeroChute" type="number" id="number2" name="number2">
+        <button onclick="checarNumeroEscolhido()">Adivinhar</button>
+        <h1 id="resposta"></h1>
+      </div>
+
+      <div class="rejogarContainer">
+        <button onclick="rejogar()" class="botaoReJogar">Rejogar</button>
+      </div>
+
+      <div class="feedbackContainer">
+        <h1 class="feedback"></h1>
+      </div>
+
+    </div>
+    <hr>
+
+    <div id="dlc">
+
+      <h2>Escolha uma DLC</h2>
+      <button>DLC 2</button>
+      <button>DLC 3</button>
+      
+    </div>
+    <script src="dlc-1.js"></script>
+    <script src="pve.js"></script>
+  </body>
+
+</html>

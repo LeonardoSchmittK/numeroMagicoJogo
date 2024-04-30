@@ -11,13 +11,19 @@ let dificuldade = ""
 
 function facil() {
     dificuldade = "facil"
-    localStorage.setItem("dificuldade", dificuldade)
+    let numeroAleatorio = parseInt(Math.random() * 10) + 1
+    return numeroAleatorio
 }
+let numeroAleatorioFacil = facil()
 function medio() {
     dificuldade = "medio"
-    localStorage.setItem("dificuldade", dificuldade)
+    let numeroAleatorio = parseInt(Math.random() * 50) + 1
+    return numeroAleatorio
 }
+let numeroAleatorioMedio = medio()
 function dificil() {
     dificuldade = "dificil"
-    localStorage.setItem("dificuldade", dificuldade)
+    let numeroAleatorio = parseInt(Math.random() * 100) + 1
+    return numeroAleatorio
 }
+let numeroAleatorioDificil = dificil()

@@ -3,7 +3,7 @@
 
 
 //Armazena a dificuldade passada pela outra script (dlc-1.js) e guarda na variavel dificuldadeEscolhida
-let dificuldadeEscolhida = localStorage.getItem("dificuldade")
+let dificuldadeEscolhida = dificuldade
 
 //Pegar o botao e chamar a função
 let botaoAcao = document.getElementById('botao')
@@ -20,37 +20,40 @@ let contador = 0
 
 function adivinharNumero(dificuldadeEscolhida){
     //Pega o valor do input e armazena na variavel numeroUsuario o valor dela
+    console.log(numeroAleatorioFacil)
+    console.log(numeroAleatorioMedio)
+    console.log(numeroAleatorioDificil)
     let input = document.getElementById('numeroUsuario')
     let numeroUsuario = input.value
     if(dificuldadeEscolhida == "facil"){
-        let numeroAleatorio = parseInt(Math.random() * 10) + 1
+        console.log("entrei no facil")
         console.log(numeroAleatorio);
-        if(numeroUsuario == numeroAleatorio){
+        if(numeroUsuario == numeroAleatorioFacil){
             respostaDiv.innerHTML = `Você acertou o número aleatório em ${contador}. Parabéns!`
         }else{
-            if(numeroUsuario > numeroAleatorio){
+            if(numeroUsuario > numeroAleatorioFacil){
                 respostaDiv.innerHTML = "O número chutado é MAIOR que o número aleatório"
             }else{
                 respostaDiv.innerHTML = "O número chutado é MENOR que o número aleatório"
             }
         }
     }else if(dificuldadeEscolhida == "medio"){
-        let numeroAleatorio = parseInt(Math.random() * 50) + 1
-        if(numeroUsuario == numeroAleatorio){
+        console.log("entrei no medio")
+        if(numeroUsuario == numeroAleatorioMedio){
             respostaDiv.innerHTML = `Você acertou o número aleatório em ${contador}. Parabéns!`
         }else{
-            if(numeroUsuario > numeroAleatorio){
+            if(numeroUsuario > numeroAleatorioMedio){
                 respostaDiv.innerHTML = "O número chutado é MAIOR que o número aleatório"
             }else{
                 respostaDiv.innerHTML = "O número chutado é MENOR que o número aleatório"
             }
         }
     }else{
-        let numeroAleatorio = parseInt(Math.random() * 100) + 1
-        if(numeroUsuario == numeroAleatorio){
+        console.log("entrei no dificil")
+        if(numeroUsuario == numeroAleatorioDificil){
             respostaDiv.innerHTML = `Você acertou o número aleatório em ${contador}. Parabéns!`
         }else{
-            if(numeroUsuario > numeroAleatorio){
+            if(numeroUsuario > numeroAleatorioDificil){
                 respostaDiv.innerHTML = "O número chutado é MAIOR que o número aleatório"
             }else{
                 respostaDiv.innerHTML = "O número chutado é MENOR que o número aleatório"
